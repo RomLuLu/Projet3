@@ -1,7 +1,6 @@
 import pygame
 import pygame.locals as const
-from constants import path_inter, path_excla, path_bubble
-from constants import start
+from constants import path_inter, path_excla, path_bubble, start, bubble_pos
 
 
 class Popup:
@@ -31,4 +30,4 @@ class Popup:
     def render_message(self):
         """Display a instruction message"""
         if self.hero.position == start:
-            self.surface.blit(self.bubble, (90, 90))
+            self.surface.blit(self.bubble, bubble_pos)
