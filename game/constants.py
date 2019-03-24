@@ -27,8 +27,12 @@ path_congrats = path_to_image("congrarulations.jpg")
 path_inter = path_to_image("interrogation.png")
 path_excla = path_to_image("exclamation.png")
 path_bubble = path_to_image("bubble.png")
+
 # Directions:
 d_top = -sprite
 d_bottom = sprite
 d_right = sprite
 d_left = -sprite
+
+# bubble position
+bubble_pos = ((start[0] + 40), (start[1] + 40))
