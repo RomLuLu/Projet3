@@ -44,8 +44,3 @@ d_left = -settings["sprite"]
 
 # bubble position
 bubble_pos = ((settings["start"][0] + 40), (settings["start"][1] + 40))
-
-print(settings["paths"]["levels"])
-print(settings["paths"]["sprites"])
-print(path_level)
-print(path_home)
