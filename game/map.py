@@ -1,14 +1,13 @@
 import pygame, sys
 import pygame.locals as const
-from constants import *
-from functions import path_to_level
+from setting import *
 
 
 class Map:
     """class who create the structure of tha maze"""
     def __init__(self, screen):
         # path to the level
-        self.path = path_to_level('level1.txt')
+        self.path = path_level
         # screen is a pygame.Surface:
         self.screen = screen
         # creation of different attributes
@@ -39,8 +38,8 @@ class Map:
                 elif item == 'S':
                     self.paths.append((x, y))
                     self.start = (x, y)
-                x += sprite
-            x, y = 0, y + sprite
+                x += settings["sprite"]
+            x, y = 0, y + settings["sprite"]
 
     def generate(self):
         """method that graphically creates the structure of the labyrinth."""

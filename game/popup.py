@@ -1,6 +1,5 @@
 import pygame
-import pygame.locals as const
-from constants import path_inter, path_excla, path_bubble, start, bubble_pos
+from setting import *
 
 
 class Popup:
@@ -21,7 +20,7 @@ class Popup:
         """Display a little pop up image when you pick up an item"""
         self.x = hero_position[0]
         self.y = hero_position[1]
-        if self.hero.position == start:
+        if self.hero.position == settings["start"]:
             self.surface.blit(self.inter, (self.x + 50, self.y))
         elif self.hero.position in self.items.list_pos:
             self.surface.blit(self.excla, (self.x + 50, self.y))
@@ -29,5 +28,5 @@ class Popup:
 
     def render_message(self):
         """Display a instruction message"""
-        if self.hero.position == start:
+        if self.hero.position == settings["start"]:
             self.surface.blit(self.bubble, bubble_pos)

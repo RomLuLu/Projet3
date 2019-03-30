@@ -1,6 +1,6 @@
 import pygame
 import pygame.locals as const
-from constants import *
+from setting import *
 
 
 class Hero:
@@ -10,7 +10,7 @@ class Hero:
         self.level = level
         self.mac = pygame.image.load(path_mac).convert_alpha()
         # hero start position.
-        self.position = start
+        self.position = settings["start"]
 
     def render(self):
         """Displays the image of the hero at the desired position."""

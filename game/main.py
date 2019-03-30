@@ -1,6 +1,6 @@
 import pygame, sys
 import pygame.locals as const
-from constants import *
+from setting import *
 from map import Map
 from hero import Hero
 from items import Item
@@ -10,7 +10,7 @@ from popup import Popup
 def main():
 
     pygame.init()
-    screen_windows = pygame.display.set_mode(resolution)
+    screen_windows = pygame.display.set_mode(settings["resolution"])
     pygame.display.set_caption("Escape Game")
 
     # Loading home image:
@@ -19,6 +19,8 @@ def main():
     game_over = pygame.image.load(path_game_over).convert_alpha()
     # Loading Congrats image:
     congrats = pygame.image.load(path_congrats).convert()
+    # Loading background:
+    backg = pygame.image.load(path_backg).convert()
 
     # Main loop:
     main_loop = True
@@ -38,9 +40,6 @@ def main():
             screen_windows.blit(home, (0, 0))
             pygame.display.flip()
 
-        # Loading background:
-        backg = pygame.image.load(path_bg).convert()
-
         # Loading level:
         level = Map(screen_windows)
         level.import_map()
@@ -55,6 +54,7 @@ def main():
         # Loading popup:
         pop_up = Popup(screen_windows, mac, items)
 
+        pygame.key.set_repeat(400, 5)
         game_loop = True
         while game_loop:
             pygame.time.Clock().tick(30)
