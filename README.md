@@ -14,7 +14,7 @@ CONTENS OF THE FILE 'GAME':
         - hero.py : who handles macGyver moves.
         - map.py : which manage the conversion of the level and its translation in graphic format.
         - items.py : who manage the appearance of objects useful to MacGyver.
-        - functions.py : file of useful functions in the management of paths.
         - main.py : program execution file.
         - popup.py : to display some message and images
-        - constants.py.
+        - settings.py: EDIT path(relativ path) ou file "sprites" and "levels" to create your own path:
+            -> settings["path"] : os.path.abspath(" your_relativ_path")
