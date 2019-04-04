@@ -1,6 +1,5 @@
 import pygame
-import pygame.locals as const
-from constants import *
+from setting import *
 import random
 
 
